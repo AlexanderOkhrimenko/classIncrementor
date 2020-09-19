@@ -6,7 +6,7 @@ type Incrementor struct {
 	Max   int
 }
 
-// getNumber получение текущего значения счетчика
+// Incrementor.getNumber получение текущего значения счетчика
 func (num Incrementor) getNumber() int {
 	return num.Value
 }
@@ -19,7 +19,7 @@ func (num *Incrementor) incrementNumber() {
 	}
 }
 
-// setMaximumValue задание масксимального значения счетчика
+// Incrementor.setMaximumValue задание масксимального значения счетчика
 func (num *Incrementor) setMaximumValue(maximumValue int) {
 	num.Max = maximumValue
 }
