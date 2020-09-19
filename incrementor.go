@@ -6,21 +6,21 @@ type Incrementor struct {
 	Max   int
 }
 
-// Incrementor.getNumber получение текущего значения счетчика
-func (num Incrementor) getNumber() int {
+// GetNumber получение текущего значения счетчика
+func (num Incrementor) GetNumber() int {
 	return num.Value
 }
 
-// incrementNumber метод увеличения счетчика
-func (num *Incrementor) incrementNumber() {
+// IncrementNumber метод увеличения счетчика
+func (num *Incrementor) IncrementNumber() {
 	num.Value++
 	if num.Value > num.Max {
 		num.Value = 0
 	}
 }
 
-// Incrementor.setMaximumValue задание масксимального значения счетчика
-func (num *Incrementor) setMaximumValue(maximumValue int) {
+// SetMaximumValue задание масксимального значения счетчика
+func (num *Incrementor) SetMaximumValue(maximumValue int) {
 	num.Max = maximumValue
 }
 
@@ -29,7 +29,7 @@ func (num *Incrementor) setMaximumValue(maximumValue int) {
 func CreateTestClass(value, maxValue, numberIterationsint int) int {
 	var a = Incrementor{value, maxValue}
 	for i := 0; i <= numberIterationsint; i++ {
-		a.incrementNumber()
+		a.IncrementNumber()
 	}
-	return a.getNumber()
+	return a.GetNumber()
 }
