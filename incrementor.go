@@ -11,7 +11,7 @@ func (num Incrementor) getNumber() int {
 	return num.Value
 }
 
-// incrementNumber метод учеличения счетчика
+// incrementNumber метод увеличения счетчика
 func (num *Incrementor) incrementNumber() {
 	num.Value++
 	if num.Value > num.Max {
@@ -25,7 +25,7 @@ func (num *Incrementor) setMaximumValue(maximumValue int) {
 }
 
 // CreateTestClass тестовая функция проверки класса где value - начальное значение счетчика,
-// maxValue - максимальное значение счетчика, numberIterationsint - количестов итераций увиличения счетчика.
+// maxValue - максимальное значение счетчика, numberIterationsint - количестов итераций увеличения счетчика.
 func CreateTestClass(value, maxValue, numberIterationsint int) int {
 	var a = Incrementor{value, maxValue}
 	for i := 0; i <= numberIterationsint; i++ {
