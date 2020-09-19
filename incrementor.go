@@ -24,19 +24,12 @@ func (num *Incrementor) setMaximumValue(maximumValue int) {
 	num.Max = maximumValue
 }
 
-//func main() {
-//
-//	var a = Incrementor{ 1, 5}
-//	//fmt.Println(&a.Value, a)
-//
-//	fmt.Println(a.getNumber())
-//	a.incrementNumber()
-//	a.incrementNumber()
-//	a.incrementNumber()
-//	a.incrementNumber()
-//	a.incrementNumber()
-//	a.incrementNumber()
-//	a.incrementNumber()
-//	fmt.Println(a.getNumber())
-//
-//}
+// CreateTestClass тестовая функция проверки класса где value - начальное значение счетчика,
+// maxValue - максимальное значение счетчика, numberIterationsint - количестов итераций увиличения счетчика.
+func CreateTestClass(value, maxValue, numberIterationsint int) int {
+	var a = Incrementor{value, maxValue}
+	for i := 0; i <= numberIterationsint; i++ {
+		a.incrementNumber()
+	}
+	return a.getNumber()
+}
